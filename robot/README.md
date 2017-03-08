@@ -12,6 +12,7 @@
 ### 配置机器人
 
 ```
+import "github.com/ggicci/dingtalk/robot"
 rb := robot.New("name", "http://webhook/address/here/...")
 ```
 
