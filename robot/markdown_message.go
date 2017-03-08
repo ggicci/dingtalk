@@ -8,7 +8,7 @@ type markdownMessage struct {
 }
 
 func (m *markdownMessage) String() string {
-	return "(" + m.payload.Markdown.Title + ", " + m.payload.Markdown.Text + ")"
+	return "MarkdownMessage(" + m.payload.Markdown.Title + "," + m.payload.Markdown.Text + ")"
 }
 
 func (m *markdownMessage) SetTitle(title string) *markdownMessage {

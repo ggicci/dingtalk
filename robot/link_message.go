@@ -8,7 +8,11 @@ type linkMessage struct {
 }
 
 func (m *linkMessage) String() string {
-	return "(" + m.payload.Link.Title + ", " + m.payload.Link.Text + ", " + m.payload.Link.PictureURL + "," + m.payload.Link.MessageURL + ")"
+	return "LinkMessage(" +
+		m.payload.Link.Title + "," +
+		m.payload.Link.Text + "," +
+		m.payload.Link.PictureURL + "," +
+		m.payload.Link.MessageURL + ")"
 }
 
 func (m *linkMessage) SetTitle(title string) *linkMessage {

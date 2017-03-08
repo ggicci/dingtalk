@@ -8,7 +8,7 @@ type textMessage struct {
 }
 
 func (m *textMessage) String() string {
-	return m.payload.Text.Content
+	return "TextMessage(" + m.payload.Text.Content + ")"
 }
 
 func (m *textMessage) SetText(text string) *textMessage {
