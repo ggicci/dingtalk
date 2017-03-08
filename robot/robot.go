@@ -53,11 +53,9 @@ func (r *Robot) sendMessagePayload(payload *messagePayload) error {
 	defer resp.Body.Close()
 	var sr serverResponse
 	responseTextBytes, _ := ioutil.ReadAll(resp.Body)
-	println(string(responseTextBytes))
 	if err := json.Unmarshal(responseTextBytes, &sr); err != nil {
 		return errors.New(err.Error() + " :" + string(responseTextBytes))
 	}
-	println(sr.ErrorCode)
 	if sr.ErrorCode != 0 {
 		return errors.New(string(responseTextBytes))
 	}

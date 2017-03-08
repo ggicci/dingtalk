@@ -16,7 +16,7 @@ func (m *textMessage) SetText(text string) *textMessage {
 	return m
 }
 
-func (m *textMessage) At(mobile ...string) *textMessage {
+func (m *textMessage) AtMobiles(mobile ...string) *textMessage {
 	m.payload.At.Mobiles = mobile
 	return m
 }

@@ -11,7 +11,7 @@ var rb = robot.New("test", "Add webhook here to text!")
 func TestSendTextMessage(t *testing.T) {
 	m := rb.NewTextMessage()
 	m.SetText("喂~~~服务器扛不住啦，再不来看看我我就离家出走啦~")
-	m.At("18667170572")
+	m.AtMobiles("18600000001")
 	m.AtAll(true)
 	err := m.Send()
 	if err != nil {
