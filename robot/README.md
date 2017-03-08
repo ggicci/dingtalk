@@ -11,14 +11,14 @@
 
 ### 配置机器人
 
-```
+```go
 import "github.com/ggicci/dingtalk/robot"
 rb := robot.New("name", "http://webhook/address/here/...")
 ```
 
 ### 发送文本(Text)
 
-```
+```go
 m := rb.NewTextMessage()
 m.SetText("喂~~~服务器扛不住啦，再不来看看我我就离家出走啦~")
 // m.AtMobiles("18600000001", "18600000002")
@@ -33,7 +33,7 @@ if err := m.Send(); err != nil {
 
 ### 发送链接(Link)
 
-```
+```go
 rb.NewLinkMessage().
   SetTitle("谢谢你长那么帅还关注我").
   SetText("人漂亮了就说整容了，那么长得丑就毁过容吗？").
@@ -46,7 +46,7 @@ rb.NewLinkMessage().
 
 ### 发送 Markdown
 
-```
+```go
 down := `
 ## 弗兰兹·卡夫卡
 
